@@ -1,0 +1,34 @@
+/* Variables */
+:root {
+    /* colors */
+    --clr-white: #FFFFFF;
+    --clr-black: #323232;
+    --clr-red: #EA5B58;
+    --clr-purple: #475A85;
+    --clr-gray: #A7A7A7;
+    --clr-gray--dark: #7B7B7B;
+    /* bg-colors */
+    --bg-services: #475A85;
+    --bg-contact: #475A85;
+    --bg-footer: #161828;
+    --bg-input: #EEEEEE;
+}
+
+/* Globals */
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: var(--clr-white);
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-black);
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
