@@ -1,0 +1,26 @@
+/* Kv section */
+.kv {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/img/kv-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+}
+
+.kv__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 40px 206px 40px;
+}
+
+.kv__text {
+    margin: 26px 0 74px 0;
+}
+
+.kv__preview {
+    position: relative;
+    background: url("../assets/img/kv-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 460px;
+    height: 345px;
+}
