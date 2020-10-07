@@ -12,20 +12,18 @@
 
 .header__logo {
     font-size: 1.5rem;
+    z-index: 2;
 }
 
 .header__logo a {
     color: var(--clr-white);
 }
 
-.header__bold {
-    font-weight: 700;
-}
-
 .header__menu {
     display: flex;
     position: relative;
-    transition: opacity 250ms ease-in;
+    transition: opacity 250ms ease-in,
+                transform 250ms ease-in;
 }
 
 .header__item:not(:last-child) {
@@ -56,7 +54,8 @@
     width: 0;
     height: 1px;
     margin: auto;
-    transition: width 250ms ease-in;
+    transition: width 250ms ease-in,
+                opacity 250ms ease-in;
 }
 
 .header__link:hover::before {
@@ -74,6 +73,7 @@
     width: 25px;
     height: 2px;
     border-radius: 5px;
+    transform-origin: 0 0;
     transition: opacity 350ms ease-in,
                 transform 250ms ease-in-out;
 }
@@ -82,17 +82,17 @@
     margin-bottom: 5px;
 }
 
-.header__mobile--active >.header__hamburger:first-child {
+.header__mobile--active >.header__hamburger:first-child { /* Hamburger animation when clicked*/
     transform-origin: 2.5px 1px;
     transform: rotate(45deg);
 }
 
-.header__mobile--active >.header__hamburger:nth-child(2) {
+.header__mobile--active >.header__hamburger:nth-child(2) { /* Hamburger animation when clicked*/
     opacity: 0;
     transform: translateX(-15px);
 }
 
-.header__mobile--active >.header__hamburger:last-child {
+.header__mobile--active >.header__hamburger:last-child { /* Hamburger animation when clicked*/
     transform-origin: 2.5px 1px;
     transform: rotate(-45deg);
 }
@@ -105,7 +105,7 @@
     }
 
     .header__wrapper {
-        padding: 33px 40px;
+        padding: 28px 40px;
     }
 
     .header__menu { /* Remove nav menu from document flow */
@@ -120,7 +120,8 @@
     }
 
     .header__menu.header__mobile--active { /* Bring back nav menu when hamburger is open*/
-        top: 90px;
+        top: 0;
+        transform: translateY(80px);
         opacity: 1;
     }
     
@@ -130,6 +131,21 @@
 
     .header__link {
         padding: 20px 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .header__link::after {
+        position: absolute;
+        content: ">";
+        top: 50%;
+        transform: translateY(-50%);
+        left: -25px;
+        opacity: 0;
+    }
+
+    .header__link:hover::after {
+        opacity: 1;
     }
 
     .header__link::before {
