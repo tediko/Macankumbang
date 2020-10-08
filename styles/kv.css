@@ -1,61 +1,62 @@
 /* Kv section */
 .kv {
-    /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../assets/img/kv-bg.jpg"); */
     background: var(--bg-kv);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right center;
 }
 
 .kv__wrapper {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 100px 40px 100px 40px;
+    padding: 100px 40px;
     z-index: 0;
 }
 
 .kv__content {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    flex: 1;
+    min-width: 350px;
+    padding-right: 35px;
 }
 
 .kv__text {
     margin: 26px 0 74px 0;
 }
 
-.kv__preview {
+.kv__previewWrapper {
     position: relative;
     max-width: 460px;
     max-height: 345px;
-    box-shadow: -20px 20px 0px 0px var(--clr-gray--light);
+    box-shadow: -20px 20px 0px 0px var(--clr-gray--light); /* Make frame for image */
     border-radius: 3px;
-    flex: 1;
 }
 
 .kv__image {
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/img/kv-image.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: auto;
+    border-radius: 3px;
 }
 
-.kv__preview::before { 
+.kv_preview {
+    flex: 1;
+}
+
+.kv__previewWrapper::before { /* Connect box frame with image with straight line in top-left corner */
     position: absolute;
     content: '';
     top: 0px;
     left: -20px;
-    border-top: 22px solid transparent;
+    border-top: 21px solid transparent;
     border-bottom: 0px solid transparent; 
-    border-right:22px solid var(--clr-gray--light);
+    border-right:21px solid var(--clr-gray--light);
     z-index: -1;
 }
 
-.kv__preview::after {
+.kv__previewWrapper::after { /* Connect box frame with image with straight line in bottom-right corner */
     position: absolute;
     content: '';
     bottom: -20px;
@@ -64,4 +65,48 @@
     border-bottom: 22px solid transparent; 
     border-left: 22px solid var(--clr-gray--light);
     z-index: -1;
+}
+
+/* Kv media queries */
+@media (max-width: 1024px) {
+    .kv__preview {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .kv__wrapper {
+        flex-direction: column;
+    }
+
+    .kv__content {
+        align-items: center;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .kv__text {
+        margin: 26px 0 26px 0;
+    }
+
+    .kv__preview {
+        margin-top: 52px;
+    }
+
+    .kv__previewWrapper {
+        box-shadow: 0px 0px 0px 6px var(--clr-gray--light); /* Change box frame to surround whole box */
+    }
+
+    .kv__previewWrapper::after, /* Disable unnecessary pseudoelements */
+    .kv__previewWrapper::before {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .kv__content {
+        min-width: 0;
+    }
 }

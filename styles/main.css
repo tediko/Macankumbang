@@ -36,6 +36,10 @@ a {
 }
 
 /* Headings styles */
+h1, h2, h3, h4, h5, h6 {
+    transition: font-size 250ms ease-in;
+}
+
 h1 {
     font-size: 3rem;
     font-weight: 700;
@@ -63,6 +67,13 @@ h5 {
 .h--black {
     color: var(--clr-black);
 }
+
+/* Headings media queries */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.875rem;
+    }
+}
 /* Text styles */
 .text--big {
     font-size: 1.5rem;
@@ -82,6 +93,13 @@ h5 {
 
 .bold {
     font-weight: 700;
+}
+
+/* Text media queries */
+@media (max-width: 480px) {
+    .text--big {
+        font-size: 1.125rem;
+    }
 }
 
 /* Buttons styles */
