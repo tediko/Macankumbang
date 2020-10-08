@@ -7,7 +7,9 @@
     --clr-purple: #475A85;
     --clr-gray: #A7A7A7;
     --clr-gray--dark: #7B7B7B;
+    --clr-gray--light: #63656E;
     /* bg-colors */
+    --bg-kv: #161828;
     --bg-services: #475A85;
     --bg-contact: #475A85;
     --bg-footer: #161828;
