@@ -86,6 +86,7 @@ h5 {
 
 .text--small {
     font-size: 0.875rem;
+    line-height: 1.2;
 }
 
 .text--black {
@@ -114,7 +115,56 @@ h5 {
                 background 250ms ease-in;
 }
 
+.cta--small {
+    font-size: 0.6875rem;
+    padding: 9px 30px;
+}
+
 .cta:hover {
     color: var(--clr-black);
     background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) var(--clr-red);
+}
+
+/* Separators */
+.separator {
+    position: relative;
+    background: var(--clr-white);
+    padding: 0 140px;
+    height: 1px;
+}
+
+.separator::before {
+    position: absolute;
+    content: '';
+    background: var(--clr-white);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 0;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.separator::after {
+    position: absolute;
+    content: '';
+    background: var(--clr-white);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 0;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.separator--black {
+    background: var(--clr-black);
+}
+
+.separator--black.separator::before {
+    background: var(--clr-black);
+}
+
+.separator--black.separator::after {
+    background: var(--clr-black);
 }
