@@ -1,0 +1,87 @@
+/* Work section */
+.work__parallax {
+    background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url('../assets/img/work-bg-parallax.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.work__parallax {
+    margin: 0 auto;
+    padding: 180px 0;
+    text-align: center;
+}
+
+.work__parallax .work__text {
+    margin-top: 15px;
+}
+
+.work__wrapper {
+    padding: 80px 40px;
+}
+
+.work__portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work__portfolio .work__text {
+    margin: 10px 0 20px 0;
+}
+
+.work__sort {
+    margin: 60px 0 30px 0;
+}
+
+.work__sortLink {
+    color: var(--clr-gray);
+}
+
+.work__flex {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.work__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work__box {
+    position: relative;
+    margin: 10px;
+    flex-basis: 1 1 500px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+}
+
+.work__boxLink:hover .work__desc {
+    display: flex;
+}
+
+.work__box img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.work__desc {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--clr-purple-alpha);
+    text-align: center;
+    color: var(--clr-white);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.work__desc .work__text {
+    max-width: 280px;
+}
