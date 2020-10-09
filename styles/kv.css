@@ -21,7 +21,6 @@
     height: 90%;
     bottom: 0;
     left: 88px;
-    z-index: -1;
 }
 
 .kv__overlay::before { /* Connect box frame with overlay background with straight line in top-left corner */
@@ -32,6 +31,7 @@
     border-top: 56px solid transparent;
     border-bottom: 0px solid transparent; 
     border-right:44px solid var(--clr-purple--dark);
+    z-index: -1;
 }
 
 .kv__content {
@@ -42,6 +42,7 @@
     justify-content: center;
     min-width: 350px;
     padding-right: 35px;
+    z-index: 2;
 }
 
 .kv__text {
@@ -64,8 +65,8 @@
     border-radius: 3px;
 }
 
-.kv_preview {
-    flex: 1;
+.kv__preview {
+    z-index: 2;
 }
 
 .kv__previewWrapper::before { /* Connect box frame with image with straight line in top-left corner */
