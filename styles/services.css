@@ -14,16 +14,36 @@
     display: flex;
     justify-content: space-between;
     margin: 140px 0 0 0;
+    padding: 7px; /* this */
 }
 
 .services__box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 250px;
+    flex: 1 1 160px;
     text-align: center;
+    margin: 7px;
 }
+
+/* .services__box:not(:last-child) {
+    margin-right: 15px;
+} */
 
 .services__text {
     margin: 10px 0 20px 0;
+}
+
+/* Services media queries */
+@media (max-width: 768px) {
+    .services__features {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 480px) {
+    .services__features {
+        flex-direction: column;
+    }
 }
