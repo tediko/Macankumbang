@@ -1,4 +1,8 @@
 /* Work section */
+.work__wrapper {
+    padding: 80px 40px;
+}
+/* Parallax */
 .work__parallax {
     background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url('../assets/img/work-bg-parallax.jpg');
     background-repeat: no-repeat;
@@ -16,10 +20,7 @@
     margin-top: 15px;
 }
 
-.work__wrapper {
-    padding: 80px 40px;
-}
-
+/* Portfolio */
 .work__portfolio {
     display: flex;
     flex-direction: column;
@@ -108,6 +109,24 @@
     transition: transform 250ms ease-in;
     margin-top: 10px;
 }
+
+/* Testimonials */
+.work__testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work__customer {
+    display: flex;
+}
+
+.work__customer-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
 /* Work media queries */
 
 @media (max-width: 768px) {
