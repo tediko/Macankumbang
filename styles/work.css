@@ -90,6 +90,24 @@
     max-width: 280px;
 }
 
+.work__browse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work__browse:hover .work__arrow {
+    transform: scale(0.7);
+}
+
+.work__browse .work__text {
+    margin: 0;
+}
+
+.work__arrow {
+    transition: transform 250ms ease-in;
+    margin-top: 10px;
+}
 /* Work media queries */
 
 @media (max-width: 768px) {

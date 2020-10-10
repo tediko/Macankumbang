@@ -101,7 +101,7 @@ h5 {
     color: var(--clr-black);
 }
 
-.bold {
+.text--bold {
     font-weight: 700;
 }
 
