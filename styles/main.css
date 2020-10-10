@@ -10,6 +10,7 @@
     --clr-gray: #A7A7A7;
     --clr-gray--dark: #7B7B7B;
     --clr-gray--light: #63656E;
+    --clr-gray--lighter: #EBEBEB;
     /* bg-colors */
     --bg-kv: #161828;
     --bg-services: #475A85;
@@ -90,6 +91,7 @@ h5 {
 
 .text {
     font-size: 1.125rem;
+    font-weight: 300;
 }
 
 .text--small {
