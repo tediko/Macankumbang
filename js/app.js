@@ -14,3 +14,20 @@ function isOpen () {
 }
 
 menuBtn.addEventListener('click', isOpen);
+
+
+/* TESTIMONIAL SLIDER */
+const slides = document.querySelectorAll('.work__customer');
+const sliderButtons = document.querySelectorAll('.work__slide');
+
+function slideIn() {
+    let index = this.dataset.id;
+    slides.forEach(slide => {
+        slide.style.display = 'none';
+    })
+    slides[index].style.display = 'flex';
+}
+
+sliderButtons.forEach(button => {
+    button.addEventListener('click', slideIn);
+})

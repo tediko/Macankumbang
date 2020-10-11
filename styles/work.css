@@ -187,6 +187,10 @@
     background: var(--clr-black);
 }
 
+.customer2, .customer3, .customer4 {
+    display: none;
+}
+
 /* Work media queries */
 @media (max-width: 768px) {
     .work__row:last-child {
