@@ -162,8 +162,7 @@
 .work__customer-desc .work__text::before {
     position: absolute;
     content: '“';
-    top: -15px;
-    left: -25px;
+    margin: -25px 0 0 -25px;
     font-size: 60px;
 }
 
@@ -199,4 +198,20 @@
     .work__box {
         flex: 1 1 200px;
     }
+
+    .work__customer {
+        flex-direction: column;
+    }
+
+    .work__customer-image {
+        margin-right: 0;
+    }
+
+    .work__customer-desc {
+        margin: 25px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
 }
