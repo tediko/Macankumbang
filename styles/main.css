@@ -139,8 +139,9 @@ h5 {
 .separator {
     position: relative;
     background: var(--clr-white);
-    padding: 0 140px;
     height: 1px;
+    max-width: 280px;
+    width: 100%;
 }
 
 .separator::before {
