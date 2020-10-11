@@ -181,6 +181,10 @@
     cursor: pointer;
 }
 
+.work__slide:hover {
+    background: var(--clr-gray);
+}
+
 .work__slide.active {
     background: var(--clr-black);
 }
@@ -211,7 +215,4 @@
         margin: 25px 0;
         text-align: center;
     }
-}
-
-@media (max-width: 480px) {
 }

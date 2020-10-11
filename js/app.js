@@ -26,6 +26,15 @@ function slideIn() {
         slide.style.display = 'none';
     })
     slides[index].style.display = 'flex';
+    removeActive()
+    this.classList.toggle('active');
+    
+}
+
+function removeActive() {
+    sliderButtons.forEach(button => {
+        button.classList.remove('active')
+    })
 }
 
 sliderButtons.forEach(button => {
