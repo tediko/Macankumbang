@@ -168,7 +168,24 @@
     padding-right: 10px;
 }
 
+.work__slide-buttons {
+    display: flex;
+    justify-content: center;
+}
 
+.work__slide {
+    background: var(--clr-gray--dark);
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    margin: 10px;
+    transition: color 250ms ease-in;
+    cursor: pointer;
+}
+
+.work__slide.active {
+    background: var(--clr-black);
+}
 
 /* Work media queries */
 @media (max-width: 768px) {
