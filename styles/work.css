@@ -152,10 +152,20 @@
 }
 
 .work__customer-desc {
+    position: relative;
     flex: 1;
     line-height: 1.4;
     text-align: left;
     max-width: 850px;
+}
+
+.work__customer-desc .work__text::before {
+    position: absolute;
+    content: '“';
+    top: -15px;
+    left: -15px;
+    font-size: 60px;
+    padding-right: 10px;
 }
 
 
