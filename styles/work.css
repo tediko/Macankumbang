@@ -142,7 +142,7 @@
     overflow: hidden;
     border-radius: 50%;
     border: 5px solid var(--clr-gray--lighter);
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 .work__customer-image img {
@@ -163,9 +163,8 @@
     position: absolute;
     content: '“';
     top: -15px;
-    left: -15px;
+    left: -25px;
     font-size: 60px;
-    padding-right: 10px;
 }
 
 .work__slide-buttons {
