@@ -48,6 +48,7 @@ const sortBox = document.querySelectorAll('.work__box');
 
 function sortGallery(e) {
     e.preventDefault();
+    sortRemoveActive() // remove active class from all sortLinks
     const filter = this.dataset.sort;
 
     sortBox.forEach(box => {
@@ -58,6 +59,12 @@ function sortGallery(e) {
             box.classList.remove('work__box--hidden')
         }
     })
+
+    this.classList.add('active'); //add active class to sortLink
+}
+
+function sortRemoveActive() {
+    sortLinks.forEach(link => link.classList.remove('active'));
 }
 
 sortLinks.forEach(link => link.addEventListener('click', sortGallery));

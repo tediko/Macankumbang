@@ -39,6 +39,11 @@
     color: var(--clr-gray);
 }
 
+.work__sortLink.active {
+    color: var(--clr-black);
+    font-weight: 700;
+}
+
 .work__gallery {
     display: flex;
     flex-direction: column;
@@ -57,11 +62,11 @@
     margin: 15px;
     flex: 1 1 300px;
     box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.15);
+    animation: 250ms ease-in 0s normal none 1 running workBoxHidden;
 }
 
 .work__box--hidden {
     display: none;
-    animation: 250ms ease-in 0s normal none 1 running workBoxHidden;
 }
 
 @keyframes workBoxHidden {
