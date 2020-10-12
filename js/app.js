@@ -40,3 +40,24 @@ function removeActive() {
 sliderButtons.forEach(button => {
     button.addEventListener('click', slideIn);
 })
+
+
+/* WORK GALLERY FILTER */
+const sortLinks = document.querySelectorAll('.work__sortLink');
+const sortBox = document.querySelectorAll('.work__box');
+
+function sortGallery(e) {
+    e.preventDefault();
+    const filter = this.dataset.sort;
+
+    sortBox.forEach(box => {
+        const dataset = box.dataset.sort;
+        if (!dataset.includes(filter)) {
+            box.classList.add('work__box--hidden');
+        } else {
+            box.classList.remove('work__box--hidden')
+        }
+    })
+}
+
+sortLinks.forEach(link => link.addEventListener('click', sortGallery));
