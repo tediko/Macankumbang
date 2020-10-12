@@ -123,7 +123,7 @@ h5 {
     font-size: 1.125rem;
     background: var(--clr-red);
     color: var(--clr-white);
-    padding: 15px 55px;
+    padding: 18px 50px;
     border-radius: 3px;
     transition: color 250ms ease-in,
                 background 250ms ease-in;
@@ -132,6 +132,10 @@ h5 {
 .cta--small {
     font-size: 0.6875rem;
     padding: 9px 30px;
+}
+
+.cta--big {
+    padding: 18px 57px;
 }
 
 .cta:hover {

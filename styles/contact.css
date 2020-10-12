@@ -1,0 +1,45 @@
+/* Contact section */
+.contact {
+    background: var(--clr-purple);
+}
+
+.contact__parallax {
+    background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url('../assets/img/contact-bg-parallax.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 169px 40px;
+}
+
+.contact__wrapper {
+    padding: 60px 40px;
+}
+
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__info .contact__text {
+    margin: 10px 0 20px 0;
+}
+
+.contact__box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact__inputs {
+    display: flex;
+}
+
+.contact__inputs input {
+    max-width: 274px;
+    width: 100%;
+    background: var(--bg-input);
+    border: none;
+    border-radius: 3px;
+    padding: 20px 0 20px 10px;
+}
