@@ -1,0 +1,21 @@
+/* Footer section */
+.footer {
+    background: var(--clr-footer);
+}
+
+.footer__wrapper {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.footer__text {
+    color: var(--clr-gray);
+}
+
+.footer__logo {
+    margin-top: 15px;
+}
+
+.footer__link {
+    font-size: 1.25rem;
+}
