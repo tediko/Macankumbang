@@ -3,6 +3,7 @@
     background: var(--clr-purple);
 }
 
+/* Parallax */
 .contact__parallax {
     background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url('../assets/img/contact-bg-parallax.jpg');
     background-size: cover;
@@ -15,6 +16,7 @@
     padding: 60px 40px;
 }
 
+/* Info */
 .contact__info {
     display: flex;
     flex-direction: column;
@@ -25,7 +27,7 @@
     margin: 10px 0 20px 0;
 }
 
-.contact__box {
+.contact__box { /* wrapper for data and form */
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -61,7 +63,7 @@
     box-sizing: border-box;
 }
 
-.contact__inputs input:not(:last-child) {
+.contact__inputs input:not(:last-child) { /* margin right to first input */
     margin-right: 19px;
 }
 
@@ -69,7 +71,7 @@
     margin-top: 19px;
 }
 
-.contact__textarea textarea{
+.contact__textarea textarea {
     width: 100%;
     background: var(--bg-input);
     border: none;
@@ -115,7 +117,7 @@
         max-width: 100%;
     }
 
-    .contact__inputs input:not(:last-child) {
+    .contact__inputs input:not(:last-child) { /* change margin right to margin bottom on first input */
         margin: 0 0 19px 0;
     }
 
