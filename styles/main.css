@@ -27,6 +27,7 @@ html, body {
     padding: 0;
     color: var(--clr-white);
     position: relative;
+    scroll-behavior: smooth;
 }
 
 a {
