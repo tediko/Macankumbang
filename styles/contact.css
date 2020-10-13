@@ -29,10 +29,26 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin: 60px 0 0 0;
+}
+
+.contact__data {
+    flex: 1;
+    margin-right: 15px;
+}
+
+.contact__address {
+    margin-left: 30px;
+}
+
+.contact__form {
+    flex: 2;
+    max-width: 548px;
 }
 
 .contact__inputs {
     display: flex;
+    justify-content: space-between;
 }
 
 .contact__inputs input {
@@ -42,4 +58,28 @@
     border: none;
     border-radius: 3px;
     padding: 20px 0 20px 10px;
+    box-sizing: border-box;
+}
+
+.contact__inputs input:not(:last-child) {
+    margin-right: 19px;
+}
+
+.contact__textarea {
+    margin-top: 19px;
+}
+
+.contact__textarea textarea{
+    width: 100%;
+    background: var(--bg-input);
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 20px 0 20px 10px;
+    resize: none;
+}
+
+.contact__submit {
+    display: inline-block;
+    margin: 19px 0 0 0;
 }
