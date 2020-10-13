@@ -68,3 +68,24 @@ function sortRemoveActive() {
 }
 
 sortLinks.forEach(link => link.addEventListener('click', sortGallery));
+
+/* SCROLL TOP BUTTON */
+const scrollTop = document.querySelector('.scrollTop');
+const scrollSection = document.querySelector('.contact');
+
+const options = {
+    rootMargin: '0px',
+    threshold: 0.2
+}
+
+const scrollObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            scrollTop.classList.add('active');
+        } else {
+            scrollTop.classList.remove('active');
+        }
+    }) 
+}, options)
+
+scrollObserver.observe(scrollSection);

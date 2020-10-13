@@ -1,0 +1,65 @@
+/* Scroll to top button */
+.scrollTop {
+    position: fixed;
+    display: none;
+    align-items: center;
+    bottom: 220px;
+    right: 50px;
+    height: 57px;
+    width: 57px;
+    border-radius: 3px;
+    background: var(--clr-gray--lighter);
+    transition: background 250ms ease-in;
+    animation: 250ms ease-in 0s normal none 1 running scrollTop;
+}
+
+.scrollTop:hover {
+    background: var(--clr-red);
+}
+
+@keyframes scrollTop {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.scrollTop.active {
+    display: flex;
+}
+
+.scrollTop__line {
+    display: block;
+    position: relative;
+    background: var(--clr-gray--dark);
+    width: 4px;
+    height: 23px;
+    margin: 0 auto;
+    transition: background 250ms ease-in;
+}
+
+.scrollTop:hover .scrollTop__line {
+    background: var(--clr-black);
+}
+
+.scrollTop__line:first-child {
+    transform: rotate(45deg);
+    left: 8px;
+}
+
+.scrollTop__line:last-child {
+    transform: rotate(-45deg);
+    left: -8px;
+}
+
+/* Scroll-top media queries */
+@media (max-width: 1024px) {
+    .scrollTop.active {
+        display: none;
+    }
+}
