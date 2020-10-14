@@ -97,3 +97,38 @@ homeLinks.forEach(link => {
         window.scrollTo(0, 0);
     })
 })
+
+/* MENU SCROLLSPY */
+
+document.addEventListener('DOMContentLoaded', () => {
+    // grab the spySections (targets) and spyLinks (triggers)
+    const spySections = document.querySelectorAll('[data-scroll]');
+    const spyLinks = document.querySelectorAll('.header__link');
+
+    // functions to add and remove the active class from links as appropriate
+    const makeActive = (link) => spyLinks[link].classList.add("header__link--active");
+    const removeActive = (link) => spyLinks[link].classList.remove("header__link--active");
+    const removeAllActive = () => [...Array(spySections.length).keys()].forEach((link) => removeActive(link));
+    // change the active link a bit above the actual section
+    const sectionMargin = 200;
+
+    // keep track of the currently active link
+    let currentActive = 0;
+
+    // compare each section (by offsetTop) against the
+    // viewport's current position (by window.scrollY) to figure out what section
+    // the user is currently viewing
+
+    window.addEventListener("scroll", () => {
+        const current = spySections.length - [...spySections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin ) - 1;
+
+    // only if the section has changed
+    // remove active class from all menu links
+    // and then apply it to the link for the current section
+        if (current !== currentActive) {
+            removeAllActive();
+            currentActive = current;
+            makeActive(current);
+        }
+    });
+}, false);

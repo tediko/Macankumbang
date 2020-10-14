@@ -67,6 +67,14 @@
     width: 100%;
 }
 
+.header__link--active.header__link::before {
+    width: 100%;
+}
+
+.header__link--active.header__link {
+    color: var(--clr-red);
+}
+
 .header__mobile {
     display: none;
     cursor: pointer;
