@@ -1,6 +1,7 @@
 /* Kv section */
 .kv {
     background: var(--bg-kv);
+    margin-top: 80px;
 }
 
 .kv__wrapper {

@@ -1,3 +1,5 @@
+
+
 /* HEADER DROPDOWN MENU */
 const menuBtn = document.querySelector('.header__mobile');
 const menu = document.querySelector('.header__menu');
@@ -89,3 +91,11 @@ const scrollObserver = new IntersectionObserver(entries => {
 }, options)
 
 scrollObserver.observe(scrollSection);
+
+/* SCROLL TO TOP */
+const homeLinks = document.querySelectorAll('[data-home]');
+homeLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        window.scrollTo(0, 0);
+    })
+})

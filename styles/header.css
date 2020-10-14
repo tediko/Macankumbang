@@ -1,6 +1,10 @@
 /* Header section */
 .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background: var(--clr-black);
+    z-index: 999;
 }
 
 .header__wrapper {
@@ -38,7 +42,7 @@
     color: var(--clr-white);
     padding: 33px 0;
     transition: width 250ms ease-in,
-                color 250ms ease-in-out;
+                color 250ms ease-in-out
 }
 
 .header__link:hover {
