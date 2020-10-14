@@ -1,7 +1,7 @@
 /* Kv section */
 .kv {
     background: var(--bg-kv);
-    margin-top: 80px;
+    margin-top: 80px; /* This equals header height which is set to fixed */
 }
 
 .kv__wrapper {

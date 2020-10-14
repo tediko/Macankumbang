@@ -31,7 +31,7 @@
     z-index: 999;
 }
 
-.header__item:not(:last-child) {
+.header__item:not(:last-child) { 
     margin-right: 50px;
 }
 
@@ -40,7 +40,7 @@
     position: relative;
     font-size: 0.875rem;
     color: var(--clr-white);
-    padding: 33px 0;
+    padding: 33px 0; /* Set whole header height */
     transition: width 250ms ease-in,
                 color 250ms ease-in-out
 }
@@ -49,7 +49,7 @@
     color: var(--clr-red);
 }
 
-.header__link::before {
+.header__link::before { /* Hover effect */
     position: absolute;
     content: '';
     background: var(--clr-white);

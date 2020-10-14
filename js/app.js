@@ -1,5 +1,3 @@
-
-
 /* HEADER DROPDOWN MENU */
 const menuBtn = document.querySelector('.header__mobile');
 const menu = document.querySelector('.header__menu');
